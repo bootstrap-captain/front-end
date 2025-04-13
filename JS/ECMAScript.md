@@ -1074,11 +1074,13 @@ class Boy extends People {
 ### js文件+html
 
 - 如果不同的js中有相同的变量名，在html中引用过时，会出现重名冲突
-- 谁先引进，就用谁的数据
+- 谁后引进，就用谁的数据
 
 ![image-20250413145438510](https://skillset.oss-cn-shanghai.aliyuncs.com/image-20250413145438510.png)
 
 ## ES6模块化
+
+- 在浏览器端和服务器端，都支持
 
 ### EXPORT
 
@@ -1131,8 +1133,6 @@ export {age, person, check, hardWork};
 #### 默认暴露
 
 - 一个js只能使用一个default
-
-- 
 
 ```js
 // 对象
@@ -1201,6 +1201,7 @@ export default {
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--moudle：声明为ES6的模块化-->
     <script type="module">
         import * as first from './js/demo01.js';
 
@@ -1222,6 +1223,7 @@ export default {
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    
     <script type="module">
         import {age, default as second, name} from './js/demo01.js';
 
@@ -1250,6 +1252,26 @@ export default {
         import fourth from './js/demo01.js';
 
         fourth.sleep();
+    </script>
+</head>
+<body>
+</body>
+</html>
+```
+
+#### 不接受任何数据
+
+- 单纯为了把这个js加载进来，如果这个js有其他副作用代码，就可以在项目中执行了
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="module">
+        import {} from './js/empty.js';
+
     </script>
 </head>
 <body>

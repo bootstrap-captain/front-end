@@ -6,6 +6,10 @@
 ```bash
 1. 下载node.js
 2. 安装typescript:    npm i -g typescript        # ts解析器
+
+# 查看版本：5.8。3
+tsc -v
+tsc --version
 ```
 
 - 在项目根目录下，执行tsc -init，就会生成一个tsconfig.json
