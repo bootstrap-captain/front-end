@@ -1304,3 +1304,9 @@ console.log(age);
 obj.sleep();
 ```
 
+# Promise
+
+- 一个构造函数，提供了一种异步编程的解决方案
+
+
+
