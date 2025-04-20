@@ -1,7 +1,5 @@
 # Startup
 
-![image-20250415153034171](https://skillset.oss-cn-shanghai.aliyuncs.com/image-20250415153034171.png)
-
 ## Angular Cli
 
 [Angular Cli依赖](https://www.npmjs.com/package/@angular/cli?activeTab=versions)
