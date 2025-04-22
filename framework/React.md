@@ -142,9 +142,9 @@ import Cat from "../cat/Cat.tsx";
 function Food() {
     const name: string = 'erick';
 
-    /*1. 虚拟DOM, 必须有一个根标签，且根标签内的标签必须闭合，因此用<div>包裹起来
-    * 2. 绑定样式时，不要用class, 要使用className,避免和ES6中的class关键字引发冲突
-    * 3. 使用内联样式时，用style={{key:value}}方式
+    /*1. 虚拟DOM, 必须有一个根标签
+    * 2. 样式使用className,避免和ES6中的class关键字冲突
+    * 3. 内联样式：style={{key:value}}方式
     * 4. 使用js表达式时，使用{}来获取
     * 5. 标签首字母
                  如果是小写开头，比如<div>，则将该标签转换为html中同名元素。若html中无该标签同名元素，则报错
