@@ -984,55 +984,6 @@ export default function App() {
 
 # 受控组件
 
-## 高阶函数
-
-### 1. 定义
-
-```bash
-# 高阶函数：    如果一个函数满足下面两条任意一个
-- A函数，接收的参数是一个函数，       那么A就是高阶函数
-- A函数，调用的返回值依然是一个函数，  那么A就是高阶函数
-       #    Promise  setTimeout, arr.map
-
-# 函数柯里化
-- 通过函数调用继续返回函数的方式，实现多次接受参数，最后统一处理的函数编码方式
-```
-
-### 2. 非柯里化
-
-```ts
-function sum(a, b, c) {
-    return a + b + c;
-}
-
-let sum1 = sum(1, 3, 5);
-console.log(sum1);
-```
-
-### 3. 柯里化
-
-```ts
-/*因为调用参数时，不一定一下子都能拿到所有参数*/
-function sum(a) {
-    console.log(`a=${a}`);
-
-    return (b) => {
-        console.log(`b=${b}`)
-
-        return (c) => {
-            console.log(`c=${c}`)
-            return a + b + c;
-        }
-    }
-}
-
-/*a=1
- b=3
- c=5
-*/
-sum(1)(3)(5);
-```
-
 ## 函数回调
 
 - 如果在回调方法中，需要传递除了event之外的参数，可以考虑柯里化和非柯里化两种方式

@@ -7,7 +7,7 @@
 1. 下载node.js
 2. 安装typescript:    npm i -g typescript        # ts解析器
 
-# 查看版本：5.8。3
+# 查看版本：5.8.3
 tsc -v
 tsc --version
 ```
@@ -380,6 +380,49 @@ let say: (address: string, age: number) => string;
 say = function (address: string, age: number) {
     return address + age;
 }
+```
+
+## 高阶函数
+
+- A函数，如果形参是函数类型，或者返回值是函数类型，则A就是高阶函数
+
+### 自定义
+
+```js
+function check(address: string) {
+    console.log(address);
+
+    return function work(name: string) {
+        console.log(`${address}, ${name}`);
+    }
+}
+
+/*调用*/
+check('北京')('erick');
+```
+
+### 柯里化
+
+```js
+/*因为调用参数时，不一定一下子都能拿到所有参数*/
+function sum(a) {
+    console.log(`a=${a}`);
+
+    return (b) => {
+        console.log(`b=${b}`)
+
+        return (c) => {
+            console.log(`c=${c}`)
+            return a + b + c;
+        }
+    }
+}
+
+/*a=1
+ b=3
+ c=5
+*/
+sum(1)(3)(5);
 ```
 
 # 面向对象
