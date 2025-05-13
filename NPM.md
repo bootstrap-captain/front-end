@@ -247,3 +247,13 @@ npm uninstall lodash -g
 ```bash
 npm outdated
 ```
+
+## Black duck
+
+- 执行npm i的时候，会检查当前的所有依赖中，是否存在漏洞
+
+```bash
+# 将对应的漏洞报告输出到当前目录下的文件夹内
+npm install && npm audit --json > result.json
+```
+
