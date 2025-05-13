@@ -254,6 +254,7 @@ npm outdated
 
 ```bash
 # 将对应的漏洞报告输出到当前目录下的文件夹内
-npm install && npm audit --json > result.json
+npm install
+npm audit --json > result.json
 ```
 
