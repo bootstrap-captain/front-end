@@ -251,6 +251,7 @@ npm outdated
 ## Black duck
 
 - 执行npm i的时候，会检查当前的所有依赖中，是否存在漏洞
+- 一般会检查： package.json， package-lock.json，当前项目的node_moudles
 
 ```bash
 # 将对应的漏洞报告输出到当前目录下的文件夹内
